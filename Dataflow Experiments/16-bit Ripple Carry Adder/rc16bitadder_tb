@@ -1,0 +1,13 @@
+module rc16bitadder_tb();
+reg [15:0] A,B;
+reg Cin;
+wire [15:0] Sum;
+wire Cout;
+rc16bitadder UUT(A,B,Cin,Sum,Cout);
+initial begin
+A=16'b0111100000000000; B=16'b1000000111100000; Cin=1'b0; #100
+A=16'b0111100000010001; B=16'b1110000110100000; Cin=1'b0; #100
+A=16'b0111100001100000; B=16'b0110000101100000; Cin=1'b0; #100
+A=16'b0111100011001110; B=16'b0000000111100110; Cin=1'b0; #100;
+end
+endmodule
